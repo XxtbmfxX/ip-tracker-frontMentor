@@ -12,9 +12,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -29,16 +27,16 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./localhost_3000_.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [:D](https://github.com/XxtbmfxX/ip-tracker-frontMentor)
 
 ## My process
 
 - Use taildwind is getting easier
+- Initialice better the state
 
 ### Built with
 
@@ -48,15 +46,13 @@ Users should be able to:
 
 ### What I learned
 
+work in parts.
+
 ### Continued development
 
-- Add animations
-
-### Useful resources
+- Try to add some animatios to next projects
 
 ## Author
 
 - Frontend Mentor - [@XxtbmfxX](https://www.frontendmentor.io/profile/XxtbmfxX)
 - Twitter - [@Xx_Toro_xX](https://www.twitter.com/Xx_Toro_xX)
-
-## Acknowledgments
