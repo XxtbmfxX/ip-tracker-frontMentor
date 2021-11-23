@@ -11,6 +11,7 @@ import Map from "./components/Map";
 function App() {
   const [inputIp, setInputIp] = useState("");
   const [userIp, setuserIp] = useState();
+  const [location, setLocation] = useState();
 
   const secretAPI = "at_N6BJYFRznP7wvvUanJZu2Pmrvn2l8";
   const CurrentVer = "v2";
@@ -22,7 +23,7 @@ function App() {
       .then((resp) => resp.json())
       .then((data) => {
         setuserIp(data);
-        console.log(data);
+        setLocation({ lat: data.location.lat, lng: data.location.lng });
       })
       .catch((err) => console.log(err));
   };
@@ -32,21 +33,20 @@ function App() {
   }, []);
 
   const handleClick = () => {
-    inputIp === undefined || inputIp.length > 15 || inputIp.length < 15
+    inputIp === undefined || inputIp === "" || inputIp < 7
       ? alert("please enter a valid IP unu")
       : getUserIp(API2);
   };
 
   const handleChange = (e) => {
     setInputIp(e.target.value);
-    console.log(inputIp);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
-  return userIp === undefined ? (
+  return userIp === undefined || userIp === "" ? (
     <h1>Loading</h1>
   ) : (
     <div className="flex flex-col items-center justify-center ">
@@ -61,7 +61,7 @@ function App() {
         <Data userIp={userIp} />
       </div>
 
-      <Map lat={userIp.location.lat} lng={userIp.location.lng} />
+      <Map location={location} />
     </div>
   );
 }

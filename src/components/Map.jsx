@@ -1,7 +1,12 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
-const Map = ({ lat, lng }) => {
-  const position = [lat, lng];
+const Map = ({ location }) => {
+  if (location === undefined || location === "") {
+    return <h1>Loading...</h1>;
+  }
+
+  const position = [location.lat, location.lng];
+
   return (
     <MapContainer
       className=" h-40 z-40"
@@ -13,7 +18,7 @@ const Map = ({ lat, lng }) => {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[lat, lng]}>
+      <Marker position={position}>
         <Popup>uwu</Popup>
       </Marker>
     </MapContainer>
